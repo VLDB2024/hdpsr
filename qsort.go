@@ -2,9 +2,6 @@ package hdpsr
 
 import "math/rand"
 
-// 返回一个数组中前k大的数组切片
-// 采用快速排序中partition的思想，快速得到前k大的数据
-// 时间复杂度：O(n)
 type sortNode struct {
 	diskId  int
 	idx     int

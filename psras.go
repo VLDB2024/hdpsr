@@ -12,7 +12,6 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-// 根据磁盘当中慢节点的数量选择intraStripe
 func (e *Erasure) getIntraStripeFast() int {
 	intraStripe := 0
 	for _, stripe := range e.Stripes {

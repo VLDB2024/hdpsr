@@ -9,23 +9,6 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-// 函数名：getDecodeMatrix
-// 输入：
-// 1. invalidIndices []int 失效索引
-// 输出
-// 1. decodeMatrix matrix 解码矩阵
-
-// 函数名：recoverWithSomeShards
-// 输入：
-// 1. decodeMatrix matrix 解码矩阵
-// 2. inputs [][]byte 待计算数据块
-// 3. inputsIdx []int 待计算数据块在条带中的索引 (len(inputsIdx) == len(inputs))
-// 4. invalidIndice int 失效块索引
-// 5. tempShard []byte 中间块
-// 输出：
-// output []byte 计算出的数据块（可能是最终结果，也可能是中间块）
-// error 可能的错误
-
 func (e *Erasure) PartialStripeRecover(fileName string, options *Options) (map[string]string, error) {
 	// start1 := time.Now()
 	var failDisk int = 0

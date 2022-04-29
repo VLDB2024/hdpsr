@@ -10,7 +10,6 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
-// 根据磁盘的带宽，合理选择相应的磁盘进行传输
 func (e *Erasure) PartialStripeMultiRecoverSlowerFirst(fileName string, slowLatency int, options *Options) (map[string]string, error) {
 	failNum := 0
 	for i := 0; i < e.DiskNum; i++ {

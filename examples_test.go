@@ -8,7 +8,7 @@ import (
 	"math/rand"
 	"os"
 
-	grasure "github.com/icpp22hdpsr/hdpsr"
+	grasure "github.com/icpp2022hdpsr/hdpsr"
 )
 
 func fillRandom(p []byte) {

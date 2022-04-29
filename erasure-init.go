@@ -10,7 +10,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/icpp22hdpsr/reedsolomon"
+	"github.com/icpp2022hdpsr/reedsolomon"
 	"golang.org/x/sync/errgroup"
 )
 

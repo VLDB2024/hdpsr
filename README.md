@@ -6,7 +6,7 @@ You should prepare a machine running Ubuntu16.04 and configure the Golang enviro
 
 To download the project:
 ```
-git clone https://github.com/icpp22hdpsr/hdpsr.git
+git clone https://github.com/icpp2022hdpsr/hdpsr.git
 ```
 
 Then download the module:
@@ -51,7 +51,7 @@ go mod tidy
 
 
 import:
-[reedsolomon library](https://github.com/icpp22hdpsr/reedsolomon)
+[reedsolomon library](https://github.com/icpp2022hdpsr/reedsolomon)
 
 ## Usage
 A complete demonstration of various CLI usage lies in `examples/build.sh`. You may have a glimpse.

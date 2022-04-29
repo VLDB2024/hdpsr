@@ -52,7 +52,6 @@ func sliceSub(slice []float64, sub float64) {
 	}
 }
 
-// 第一次降维
 func reductFirst(arr [][]float64, is int) []float64 {
 	s := len(arr)
 	if s == 0 {
@@ -86,7 +85,6 @@ func reductFirst(arr [][]float64, is int) []float64 {
 	return res
 }
 
-// 第二次降维
 func reductSecond(arr []float64, conStripe int) float64 {
 	s := len(arr)
 	if s == 0 {
@@ -132,7 +130,7 @@ func (e *Erasure) getData(slowLatency int) [][]float64 {
 	for i := range data {
 		data[i] = make([]float64, e.K)
 	}
-	// 得到二维数组
+
 	for i := range e.Stripes {
 		stripe := e.Stripes[i]
 		fail := 0
@@ -159,13 +157,11 @@ func sort2DArray(data [][]float64) {
 	}
 }
 
-// 选择intraStripe
 func (e *Erasure) getIntraStripeOptimal(slowLatency int) int {
 	data := e.getData(slowLatency)
 	sort2DArray(data)
 	var minIs int = 2
 	var minTime float64 = reduct(data, 2, e.MemSize*GB, int(e.BlockSize))
-	// 两次降维法
 	for is := 3; is <= e.K/2; is++ {
 		time := reduct(data, is, e.MemSize*GB, int(e.BlockSize))
 		if time < minTime {

@@ -3,7 +3,7 @@ package hdpsr
 import (
 	"sync"
 
-	"github.com/icpp22hdpsr/reedsolomon"
+	"github.com/icpp2022hdpsr/reedsolomon"
 )
 
 // type CustomerAPI interface {
